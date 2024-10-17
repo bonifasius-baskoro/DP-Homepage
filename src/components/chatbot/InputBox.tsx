@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 
 const InputBox:FC = () => {
-    const initialValueForms: chatSubmission= {
-        input : ""
-    };
+    // const initialValueForms: chatSubmission= {
+    //     input : ""
+    // };
 
-    
+
   return (
     <div>
         

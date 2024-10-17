@@ -1,0 +1,18 @@
+
+  <svg 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    width="788.5px" height="484.5px"
+    style={{ stroke: color }}
+  >
+    <path fillRule="evenodd" strokeWidth="3px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
+     d="M3.500,3.500 L783.500,3.500 L783.500,479.500 L3.500,479.500 L3.500,3.500 Z"/>
+    <path fillRule="evenodd" strokeWidth="3px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
+     d="M193.036,477.467 L192.151,477.024 L428.109,5.188 L428.994,5.631 L193.036,477.467 Z"/>
+    <path fillRule="evenodd" strokeWidth="3px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
+     d="M329.036,477.467 L328.151,477.024 L564.109,5.188 L564.994,5.631 L329.036,477.467 Z"/>
+    <path fillRule="evenodd" strokeWidth="3px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
+     d="M3.500,279.500 L3.500,278.724 L290.755,278.724 L290.755,279.500 L3.500,279.500 Z"/>
+    <path fillRule="evenodd" strokeWidth="3px" strokeLinecap="butt" strokeLinejoin="miter" fill="none"
+     d="M472.592,184.431 L472.592,183.591 L783.500,183.591 L783.500,184.431 L472.592,184.431 Z"/>
+  </svg>

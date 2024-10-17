@@ -1,9 +1,13 @@
 import React, { FC } from "react";
 import { cards } from "@/app/data/teamList";
 import Card from "./Card";
+import Navbar from "@/components/shared/Navbar";
 const page: FC = () => {
   return (
+    <>
+     <Navbar/>
     <div className="bg-black-p px-4 min-h-screen pt-16 pb-16">
+     
       <h1 className="text-5xl text-yellow-p mb-24 ml-6">Who We Are</h1>
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
@@ -19,6 +23,7 @@ const page: FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

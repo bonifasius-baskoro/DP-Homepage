@@ -1,4 +1,4 @@
-import Navbar from "@/components/shared/Navbar";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
@@ -15,7 +15,7 @@ interface cardProps {
 const Card: FC<cardProps> = ({ name, role, photoURL, paragraph, linkedinUrl }) => {
   return (
     <>
-    <Navbar/>
+    
     <div className="w-80 bg-black-p shadow-lg rounded-lg overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:bg-yellow-p group flex flex-col h-full">
       <div className="px-6 pt-6 pb-4 flex-grow flex flex-col">
         <div className="flex justify-center mb-4">

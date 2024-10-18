@@ -7,9 +7,9 @@ import Navbar from "@/components/shared/Navbar";
 
 export default function Home() {
   return (
-    <div className="bg-back-primary flex flex-col min-h-screen">
+    <div className="bg-back-primary flex flex-col min-h-screen overflow-hidden">
       <Navbar />
-      <div className="flex-grow snap-y snap-mandatory overflow-y-scroll">
+      <div className="flex-grow snap-y snap-mandatory ">
         <div className="snap-always snap-center min-h-screen">
           <Hero />
         </div>

@@ -1,29 +1,23 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { useFormik, Formik, Form, Field, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import { postAnswer } from "@/api/chatBot";
+import { usePostAnswer } from "@/hooks/usePostAnswer";
 
 const InputBox: FC = () => {
+  const { chatMutation, isError, isLoading, data } = usePostAnswer();
   const initialValueForms: chatSubmission = {
     question: "",
   };
+
+  useEffect(() => {
+    console.log("thisi s it ", data);
+  }, [data]);
 
   const handleSubmit = async (
     values: chatSubmission,
     formikHelpers: FormikHelpers<chatSubmission>
   ) => {
-    try {
-      const response = await postAnswer(values) as chatResponse;
-
-        console.log(response)
-    } catch (error) {
-      // Handle any errors that occurred during the request
-      console.error("Error submitting question:", error);
-    } finally {
-      // This block will run regardless of success or failure
-      console.log("finally");
-    }   
-    return
+    chatMutation(values);
   };
   const validationSchema = Yup.object({
     question: Yup.string()

@@ -20,6 +20,10 @@ type chatResponse={
     answer:string;
 }
 
+
+// export interface chatHook {
+//     chatMutation:void;
+//   }
 type CardType = {
     url: string;
     title: string;

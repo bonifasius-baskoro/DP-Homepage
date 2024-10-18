@@ -1,5 +1,5 @@
 type chatSubmission=  { 
-    input:string
+    question:string
   }
 
 type valuePoint ={

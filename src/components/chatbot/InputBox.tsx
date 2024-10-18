@@ -9,15 +9,12 @@ const InputBox: FC = () => {
     question: "",
   };
 
-  useEffect(() => {
-    console.log("thisi s it ", data);
-  }, [data]);
-
   const handleSubmit = async (
     values: chatSubmission,
     formikHelpers: FormikHelpers<chatSubmission>
   ) => {
     chatMutation(values);
+    formikHelpers.resetForm();
   };
   const validationSchema = Yup.object({
     question: Yup.string()
@@ -32,24 +29,31 @@ const InputBox: FC = () => {
         onSubmit={handleSubmit}
       >
         {({ errors, touched }) => (
-          <Form className="flex items-center px-4">
+          <Form className="flex items-center px-4 gap-4 flex-shrink">
             <div className="h-full">
               <Field
-                className="bg-transparent text-yellow-p w-[80vw] text-xl overflow-x-scroll text-wrap border-b-2 border-b-yellow-300 "
+                className="bg-transparent text-yellow-p min-w-[75vw] text-xl overflow-x-scroll text-wrap border-b-2 border-b-yellow-300 "
                 name="question"
                 placeholder="Ask something about us!"
               />
               {touched && errors.question && (
-                <h2 className="text-red-600 text-sm relative transform translate-y-[-10px]">
+                <h2 className="text-[#f4f4f4] text-sm relative transform translate-y-[10px]">
                   {errors.question}
                 </h2>
               )}
             </div>
             <button
-              className="bg-black-p text-white w-[5vw] h-[5vh] rounded-full  text-base  "
+              className={`w-12 h-12 rounded-full text-white transition-colors text-xs ${
+                isLoading ? "bg-black" : "bg-blue-500"
+              }`}
               type="submit"
+              disabled={isLoading}
             >
-              Submit
+              {isLoading ? (
+                <span className="animate-spin">&#8635;</span>
+              ) : (
+                "Submit"
+              )}
             </button>
           </Form>
         )}

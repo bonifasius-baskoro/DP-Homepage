@@ -20,7 +20,11 @@ type chatResponse={
     answer:string;
 }
 
-
+type testimony={
+    name:string;
+    testimony:string;
+     companyName:string;
+}
 // export interface chatHook {
 //     chatMutation:void;
 //   }

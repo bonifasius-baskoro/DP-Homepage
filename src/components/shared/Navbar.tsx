@@ -38,8 +38,8 @@ const Navbar = () => {
       </div>
 
       {/* Mobile dropdown menu */}
-      {isOpen && (
-        <div className='absolute top-12 left-0 w-full bg-black-p md:hidden'>
+      
+        <div className={`absolute top-12 left-0 w-full bg-black-p md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
           <Link href="/" className='block py-3 px-4 text-yellow-p'>
             Home
           </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
             Who We Are
           </Link>
         </div>
-      )}
+      
     </nav>
   );
 };

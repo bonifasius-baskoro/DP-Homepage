@@ -1,6 +1,6 @@
 import { getChat, postAnswer } from "@/api/chatBot"
 
-import { isError, QueryClient, useMutation, useQuery, useQueryClient } from "react-query"
+import {  useMutation, useQuery, useQueryClient } from "react-query"
 
 
 

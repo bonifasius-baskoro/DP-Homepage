@@ -3,7 +3,7 @@ import { ENDPOINT_CHECK, URL } from '@/constant/url';
 import React, { FC, useEffect, useState } from 'react'
 import InputBox from './InputBox';
 import { usePostAnswer } from '@/hooks/usePostAnswer';
-import { useQuery, useQueryClient } from 'react-query';
+
 import { AnimatePresence, motion } from 'framer-motion';
 
 const ChatbotHome:FC = () => {

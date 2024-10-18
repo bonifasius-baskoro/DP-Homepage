@@ -26,7 +26,7 @@ export function getChat(): Promise<chatResponse> {
   }
 
 export const postAnswer = async (question: chatSubmission) => {
-  let postURL = URL + ENDPOINT_TANYA;
+  const postURL = URL + ENDPOINT_TANYA;
   const chatRequest = createChatRequest(question, getChatHistory());
   console.log(JSON.stringify(question));
   try {

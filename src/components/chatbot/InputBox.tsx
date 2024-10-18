@@ -1,10 +1,10 @@
-import React, { FC, useEffect } from "react";
-import { useFormik, Formik, Form, Field, FormikHelpers } from "formik";
+import React, { FC } from "react";
+import {  Formik, Form, Field, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { usePostAnswer } from "@/hooks/usePostAnswer";
 
 const InputBox: FC = () => {
-  const { chatMutation, isError, isLoading, data } = usePostAnswer();
+  const { chatMutation, isLoading } = usePostAnswer();
   const initialValueForms: chatSubmission = {
     question: "",
   };

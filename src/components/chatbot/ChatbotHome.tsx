@@ -48,8 +48,8 @@ const ChatbotHome:FC = () => {
 
   return (
     <div className='h-screen pt-12'>
-      <div className='text-yellow-p px-4 h-[80%] overflow-scroll p-4'>
-        <p className='text-3xl pl-4 '>
+      <div className='text-yellow-p flex-grow overflow-y-auto min-h-[60vh] p-4'>
+        <div className='text-3xl pl-4 h-full lg:px-12'>
         <AnimatePresence mode="wait">
           <motion.p
             key={displayText}
@@ -62,7 +62,7 @@ const ChatbotHome:FC = () => {
             {displayText}
           </motion.p>
         </AnimatePresence>
-        </p>
+        </div>
       </div>
       <div className="h-32 flex items-center">
         

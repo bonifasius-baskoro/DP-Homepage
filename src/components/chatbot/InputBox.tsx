@@ -22,15 +22,15 @@ const InputBox: FC = () => {
       .min(3, "Question must be longer than 3 character"),
   });
   return (
-    <div>
+    <div className="w-screen">
       <Formik
         initialValues={initialValueForms}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         {({ errors, touched }) => (
-          <Form className="flex items-center px-4 gap-4 flex-shrink">
-            <div className="h-full">
+          <Form className="flex items-center px-4 gap-4 flex-shrink lg:px-12">
+            {isLoading? "" :( <div className="h-full">
               <Field
                 className="bg-transparent text-yellow-p min-w-[75vw] text-xl overflow-x-scroll text-wrap border-b-2 border-b-yellow-300 "
                 name="question"
@@ -41,10 +41,11 @@ const InputBox: FC = () => {
                   {errors.question}
                 </h2>
               )}
-            </div>
+            </div>) }
+           
             <button
               className={`w-12 h-12 rounded-full text-white transition-colors text-xs ${
-                isLoading ? "bg-black" : "bg-blue-500"
+                isLoading ? "bg-black" : "bg-yellow-p"
               }`}
               type="submit"
               disabled={isLoading}
@@ -52,7 +53,7 @@ const InputBox: FC = () => {
               {isLoading ? (
                 <span className="animate-spin">&#8635;</span>
               ) : (
-                "Submit"
+                ""
               )}
             </button>
           </Form>

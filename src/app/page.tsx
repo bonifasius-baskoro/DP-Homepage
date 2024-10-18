@@ -10,16 +10,16 @@ export default function Home() {
     <div className="bg-back-primary flex flex-col min-h-screen overflow-hidden">
       <Navbar />
       <div className="flex-grow snap-y snap-mandatory ">
-        <div className="snap-always snap-center min-h-screen">
+        <div className="snap-start min-h-screen">
           <Hero />
         </div>
-        <div className="snap-always snap-center min-h-screen">
+        <div className="snap-start min-h-screen">
           <About />
         </div>
-        <div className="snap-always snap-center min-h-screen">
+        <div className="snap-startmin-h-screen">
           <BentoService />
         </div>
-        <div className="snap-always snap-center min-h-screen">
+        <div className="snap-start min-h-screen">
           <ChatbotHome />
         </div>
       </div>

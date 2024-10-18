@@ -8,7 +8,7 @@ interface TestimonyCardProps {
 
 const TestimonyCard: FC<TestimonyCardProps> = ({ name, testimony, companyName }) => {
   return (
-    <div className="bg-black-p rounded-lg shadow-md p-4 sm:p-6 m-2 sm:m-4 w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)] xl:w-[30vw]">
+    <div className="bg-black-p rounded-lg shadow-md p-4 sm:p-6 m-2 sm:m-4 ">
       <blockquote className="text-yellow-p text-base sm:text-lg italic mb-3 sm:mb-4">
         "{testimony}"
       </blockquote>

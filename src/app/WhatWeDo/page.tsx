@@ -33,11 +33,11 @@ const page: FC = () => {
           Hear from our partners!
         </h1>
       </div>
-      <div className="flex flex-nowrap overflow-x-auto  scrollbar-hide px-4 sm:px-0 gap-8 md:gap-4">
+      <div className="flex flex-nowrap overflow-x-auto snap-x snap-mandatory scrollbar-hide px-4 sm:px-8 md:px-12 gap-8  md:justify-center">
         {testimonies.map((testi, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-screen"
+            className="flex-shrink-0 w-screen xl:w-[30vw] "
           >
             <TestimonyCard
               name={testi.name}

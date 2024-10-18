@@ -2,10 +2,22 @@ type chatSubmission=  {
     question:string
   }
 
+type chatHistory = {
+    q:string;
+    a:string;
+}
+type chatRequest = {
+    history : chatHistory[];
+    question: string;
+}
 type valuePoint ={
     header:string;
     paragraph:string;
     pictureLink?:string;   
+}
+
+type chatResponse={
+    answer:string;
 }
 
 type CardType = {

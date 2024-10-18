@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-
-import {Plus_Jakarta_Sans } from "next/font/google"
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import ReactQueryProvider from "@/utils/providers/QueryProvider";
 
 const plusjkt = Plus_Jakarta_Sans({
-  subsets:["latin"],
-})
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,11 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${plusjkt.className} antialiased`}
-      >
-        {children}
-      </body>
+      <ReactQueryProvider>
+        <body className={`${plusjkt.className} antialiased`}>{children}</body>
+      </ReactQueryProvider>
     </html>
   );
 }

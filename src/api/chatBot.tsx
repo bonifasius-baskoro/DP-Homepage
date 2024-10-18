@@ -56,7 +56,7 @@ export const postAnswer = async (question: chatSubmission) => {
     existingHistory.push(newHistoryItem);
 
     sessionStorage.setItem(STORAGE_KEY, JSON.stringify(existingHistory));
-    console.log(response, responseData)
+    
     return responseData;
   } catch (error) {
     console.error("Error posting answer:", error);

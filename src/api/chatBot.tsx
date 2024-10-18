@@ -28,7 +28,7 @@ export function getChat(): Promise<chatResponse> {
 export const postAnswer = async (question: chatSubmission) => {
   const postURL = URL + ENDPOINT_TANYA;
   const chatRequest = createChatRequest(question, getChatHistory());
-  console.log(JSON.stringify(question));
+  
   try {
     const response = await fetch(postURL, {
       headers: {
@@ -39,14 +39,14 @@ export const postAnswer = async (question: chatSubmission) => {
       body: JSON.stringify(chatRequest),
     });
 
-    console.log("chat sent");
+    
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const responseData = await response.json();
-    console.log("this responsedata",responseData);
+    
     const existingHistory = getChatHistory();
 
     const newHistoryItem = {

@@ -23,7 +23,7 @@ const ChatbotHome:FC = () => {
     const checkServer = async()=>{
       try{
         const response = await fetch(URL+ENDPOINT_CHECK);
-        console.log(response);
+        
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }

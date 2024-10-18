@@ -20,7 +20,7 @@ export  const usePostAnswer=()=>{
         onSuccess:(data)=>{
             queryClient.setQueryData("chat", data)
             console.log("answer sucess")
-            console.log(data.answer);
+            
         }
         ,onError:(error)=>{
             console.error("error posting answer" , error);

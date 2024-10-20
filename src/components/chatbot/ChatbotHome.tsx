@@ -5,7 +5,6 @@ import InputBox from './InputBox';
 import { usePostAnswer } from '@/hooks/usePostAnswer';
 
 import { AnimatePresence, motion } from 'framer-motion';
-import { count } from 'console';
 import ContactUsBox from '../shared/ContactUsBox';
 
 const ChatbotHome:FC = () => {

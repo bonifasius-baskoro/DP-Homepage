@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaEnvelope, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {  FaLinkedin, FaInstagram } from "react-icons/fa";
 import EmailButton from "./EmailButton";
 
 interface SocialButtonProps {

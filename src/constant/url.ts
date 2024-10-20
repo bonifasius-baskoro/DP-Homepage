@@ -3,3 +3,4 @@ export const ENDPOINT_CHECK = "/check"
 export const ENDPOINT_TANYA="/tanya"
 
 export const STORAGE_KEY = "chatHistory"
+export const CHATCOUNTKEY= "chatcountkey"

@@ -32,15 +32,15 @@ const About: FC = () => {
   return (
     <div
       ref={ref}
-      className={`h-screen px-2 bg-[#212121] pt-24 transition-all duration-1000 ease-in-out ${
+      className={`h-screen  xl:h-[70vh] px-2 bg-[#212121] pt-12 md:pt-24 transition-all duration-1000 ease-in-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <div>
-        <h1 className="text-5xl text-yellow-p px-2 font-semibold md:px-4">What We Do</h1>
+      <div className="md:px-6">
+        <h1 className="text-3xl text-yellow-p px-2 font-semibold md:px-4 md:text-5xl lg:text-7xl pb-4">What We Do</h1>
       </div>
-      <div className="mt-6">
-        <p className="text-yellow-p text-lg pt-8 px-2 md:px-4">
+      <div className="mt-6 md:px-8 mb-4 xl:mb-8">
+        <p className="text-yellow-p text-base md:leading-relaxed font-normal pt-8 px-2 md:px-4 sm:text-lg md:text-2xl lg:text-2xl xl:text-3xl overflow-hidden">
           The AI Agency, based in South Tangerang, is at the forefront of
           Indonesia&apos;s artificial intelligence revolution. From this strategic
           location in Banten province, the company leverages its expertise in AI

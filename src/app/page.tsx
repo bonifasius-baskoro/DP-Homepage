@@ -13,10 +13,10 @@ export default function Home() {
         <div className="snap-start min-h-screen">
           <Hero />
         </div>
-        <div className="snap-start min-h-screen">
+        <div className="snap-start">
           <About />
         </div>
-        <div className="snap-startmin-h-screen">
+        <div className="snap-start ">
           <BentoService />
         </div>
         <div className="snap-start min-h-screen">

@@ -1,5 +1,5 @@
 "use client"
-import { ENDPOINT_CHECK, URL } from '@/constant/url';
+import { CHATCOUNTKEY, ENDPOINT_CHECK, URL } from '@/constant/url';
 import React, { FC, useEffect, useState } from 'react'
 import InputBox from './InputBox';
 import { usePostAnswer } from '@/hooks/usePostAnswer';
@@ -8,16 +8,20 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const ChatbotHome:FC = () => {
   const [chatAvailable, setChatAvailable] = useState<boolean>(false);
-  
+  const [countChat, setCountChat] = useState<number>(0);
   const{data,isLoading, isError} = usePostAnswer();
   
 
 
-  // useEffect(() => {
-  //   console.log('Current data:', data);
-  //   console.log('Loading:', isLoading);
-  //   console.log('Error:', error);
-  // }, [data, isLoading, error]);
+  useEffect(() => {
+    const localCount = localStorage.getItem(CHATCOUNTKEY);
+    if(!localCount){
+      localStorage.setItem(CHATCOUNTKEY,countChat.toString())
+    }
+    else{
+      setCountChat(parseInt(localCount));
+    }
+  }, []);
 
   useEffect(()=>{
     const checkServer = async()=>{
@@ -59,7 +63,8 @@ const ChatbotHome:FC = () => {
             transition={{ duration: 0.5 }}
             className='text-3xl'
           >
-            {displayText}
+            {countChat>10? ("You seem so curious with us feel free to contact us here "): (displayText)}
+            
           </motion.p>
         </AnimatePresence>
         </div>

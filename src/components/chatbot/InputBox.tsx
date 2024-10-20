@@ -3,7 +3,12 @@ import {  Formik, Form, Field, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { usePostAnswer } from "@/hooks/usePostAnswer";
 
-const InputBox: FC = () => {
+interface inputBoxProps {
+    chatCount :number;
+    setChatCount: ()=>void;
+}
+
+const InputBox: FC<inputBoxProps> = ({chatCount, setChatCount}) => {
   const { chatMutation, isLoading } = usePostAnswer();
   const initialValueForms: chatSubmission = {
     question: "",

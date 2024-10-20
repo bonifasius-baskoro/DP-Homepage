@@ -1,3 +1,4 @@
+"use client"
 import React, { FC } from "react";
 import {  Formik, Form, Field, FormikHelpers } from "formik";
 import * as Yup from "yup";
@@ -5,7 +6,7 @@ import { usePostAnswer } from "@/hooks/usePostAnswer";
 
 interface inputBoxProps {
     chatCount :number;
-    setChatCount: ()=>void;
+    setChatCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const InputBox: FC<inputBoxProps> = ({chatCount, setChatCount}) => {
@@ -20,12 +21,17 @@ const InputBox: FC<inputBoxProps> = ({chatCount, setChatCount}) => {
   ) => {
     chatMutation(values);
     formikHelpers.resetForm();
+    setChatCount(chatCount+1);
   };
   const validationSchema = Yup.object({
     question: Yup.string()
       .required("Question is required")
       .min(3, "Question must be longer than 3 character"),
   });
+
+  if(chatCount>10){
+    return <></>
+  }
   return (
     <div className="w-screen">
       <Formik

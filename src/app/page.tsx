@@ -19,7 +19,7 @@ export default function Home() {
         <div className="snap-start ">
           <BentoService />
         </div>
-        <div className="snap-start min-h-screen">
+        <div className="snap-start h-screen md:h-auto">
           <ChatbotHome />
         </div>
       </div>

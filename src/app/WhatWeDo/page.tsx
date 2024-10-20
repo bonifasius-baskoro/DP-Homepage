@@ -1,6 +1,7 @@
 import Navbar from "@/components/shared/Navbar";
 import Example from "@/components/whatwedo/sliderCard";
 import TestimonyCard from "@/components/whatwedo/testimonyCard";
+import ContactUsBox from "@/components/shared/ContactUsBox";
 import React, { FC } from "react";
 import { testimonies } from "../data/testimonyList";
 
@@ -24,9 +25,7 @@ const page: FC = () => {
         <div className="flex justify-center mb-4">
           <h2>Let&apos;s build together</h2>
         </div>
-        <div className="bg-black-p rounded-3xl flex justify-center mx-24 md:mx-[40vw] h-12 transition-transform duration-300 ease-in-out hover:scale-105">
-          <button className="text-yellow-p"> Contact Us!</button>
-        </div>
+        <ContactUsBox color="black"/>
       </div>
       <div className="h-24">
         <h1 className="font-bold text-3xl text-black-p md:text-5xl pl-4 mb-8">

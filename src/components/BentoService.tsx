@@ -12,10 +12,9 @@ const BentoService: FC = () => {
           <p className="text-black mt-4 text-lg md:text-2xl font-light">
             Proof your concept and go trial and error with us
           </p>
-          <div className="absolute right-0 bottom-0 p-4">
+          <div className="absolute right-0 bottom-0 p-4 ">
             <svg
-              width="50px"
-              height="50px"
+              className="w-8 h-8 md:w-12 md:h-12"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +42,7 @@ const BentoService: FC = () => {
         </div>
         <div className="flex mt-6">
           <div className="w-1/2 h-1/3 md:h-full mx-4 border-2  border-black p-4  rounded-lg hover:scale-105">
-            <h1 className="text-black text-xl font-bold">Nice</h1>
+            <h1 className="text-black text-xl font-bold">Secure</h1>
             <p className="text-black mt-4 text-xl font-light">
               Choose how you want to manage your data and model to use
             </p>

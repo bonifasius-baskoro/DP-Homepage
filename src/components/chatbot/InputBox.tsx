@@ -29,7 +29,7 @@ const InputBox: FC<inputBoxProps> = ({chatCount, setChatCount}) => {
       .min(3, "Question must be longer than 3 character"),
   });
 
-  if(chatCount>10){
+  if(chatCount>5){
     return <></>
   }
   return (

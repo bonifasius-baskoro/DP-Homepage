@@ -6,6 +6,7 @@ import { usePostAnswer } from '@/hooks/usePostAnswer';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { count } from 'console';
+import ContactUsBox from '../shared/ContactUsBox';
 
 const ChatbotHome:FC = () => {
   const [chatAvailable, setChatAvailable] = useState<boolean>(false);
@@ -56,11 +57,25 @@ const ChatbotHome:FC = () => {
   
 
   return (
-    <div className='h-screen md:h-auto pt-12'>
+    <div className={` pt-12  ${countChat>5? `h-auto` : `h-screen md:h-auto`}`}>
       <div className='text-yellow-p overflow-y-auto h-[60vh] md:h-[40vh] p-4'>
         <div className='text-3xl pl-4 h-full lg:px-12'>
         <AnimatePresence mode="wait">
-        {countChat>10? ("You seem so curious with us feel free to contact us here "): (
+        {countChat>5? (<>
+          <motion.p
+          key={displayText}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+          className='text-3xl'
+        >
+          You seem curious with us please feel free to contact us to know more!
+        </motion.p>
+        <motion.div className='mt-4'>
+          <ContactUsBox color='yellow'/>
+        </motion.div>
+        </>): (
           <motion.p
           key={displayText}
           initial={{ opacity: 0, y: 20 }}

@@ -13,7 +13,7 @@ const ContactUsBox: FC<ColorBoxProps> = ({ color }) => {
 
   const toggleModal = () => setIsOpen(prev => !prev);
 
-  const buttonClass = `rounded-3xl flex justify-center mx-24 md:mx-[40vw] h-12 ${
+  const buttonClass = `rounded-3xl flex justify-center mx-24 md:mx-[40vw] h-12 text-xl  ${
     color === "black" ? "bg-black-p text-yellow-p" : "bg-yellow-p text-black-p"
   }`;
 

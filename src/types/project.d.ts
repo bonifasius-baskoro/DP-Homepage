@@ -25,9 +25,7 @@ type testimony={
     testimony:string;
      companyName:string;
 }
-// export interface chatHook {
-//     chatMutation:void;
-//   }
+
 type CardType = {
     url: string;
     title: string;
